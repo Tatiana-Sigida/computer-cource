@@ -1,12 +1,228 @@
-header {
-  background: red;
-  p {
-    color: salmon;
-    .test {
-      color: blue;
+.promo-block {
+  background: url(../images/main-screen__bgc.png) center no-repeat;
+  background-size: cover;
+
+  .top-box {
+    padding-top: 38px;
+    margin-bottom: 188px;
+    display: flex;
+    justify-content: space-between;
+    
+    .logo {
+      margin-left: 80px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+  
+    a {
+      color: rgba(255, 255, 255, 1);
+      margin-right: 56px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
     }
   }
-  a {
-    color: green;
+
+  .header-button {
+    margin-right: 80px;
+    input, button {
+      background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+      padding: 10px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: center;
+      color: #FFFFFF;
+    }     
   }
-} 
+  
+  .center-box {
+    margin-bottom: 218px;
+    .container {
+      width: 1300px;
+      margin: 0 auto;
+    }
+    
+    .countdown-title {
+      width: 920px;
+      margin-bottom: 50px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 140%;
+      color: #FFFFFF;     
+    }
+  
+    .countdown {
+      
+      font-family: sans-serif;
+      color: #fff;
+      display: inline-block;
+      font-weight: 100;
+      text-align: center;
+      font-size: 30px;
+    }
+  
+      .countdown-number {
+      padding: 10px;
+      border-radius: 3px;
+      background: #121212;
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    .countdown-time {
+      padding: 15px;
+      border-radius: 3px;
+      display: inline-block;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 140%;
+      color: #FFFFFF;
+    }
+  
+    .countdown-text {
+      color: #FFFFFF;
+      display: block;
+      padding-top: 5px;
+      font-size: 16px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;text-align: center;
+    }
+  }
+
+  .status-bar {
+    background: rgba(18, 18, 18, 1);
+    .container {
+      width: 1300px;
+      margin: 0 auto;
+      display: flex;
+    }
+    .button-bar {
+      padding: 43px 0;
+      
+    input, .button-bar {
+      background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+      border-radius: 50px;
+      padding: 10px 30px;
+      cursor: pointer;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: #FFFFFF;
+
+    }
+    }     
+  
+    .people {
+      padding: 36px 81px 28px 81px;
+    }
+    .text {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: #FFFFFF;
+      opacity: 0.4;
+      
+    }
+    .number {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      color: #FFFFFF;
+
+    }
+    .total-person {
+      margin-bottom: 10px;
+      .text {
+        padding-right: 101px;
+      }
+    }
+    .completed-course {
+      .text{
+        padding-right: 30px;
+      }
+      
+    }
+    .money {
+      margin-top: 35px;    
+    .text {
+        padding-right: 30px;
+      }
+    }
+  }
+}
+.about {
+  background: url(../images/bgc.png);
+  padding-top: 200px;
+  .container {
+    width: 1301px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .about-img {
+    padding-right: 134px;
+    padding-bottom: 231px;
+  }
+  h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 140%;
+  color: #FFFFFF;
+  padding-bottom: 45px;
+
+  }
+  p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  color: #FFFFFF;
+  width: 636px;
+  }
+}
+
+.start {
+//   background: url(../images/bgc.png);// 
+.container {
+  width: 1301px;
+  margin: 0 auto;
+}
+.start-icon {
+  display: flex;
+  h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 140%;
+  }
+
+}  
+}
