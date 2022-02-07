@@ -1,15 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import './variables.scss';
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+}
+
 .promo-block {
+  padding-top: 38px;
   background: url(../images/main-screen__bgc.png) center no-repeat;
   background-size: cover;
-
-  .top-box {
-    padding-top: 38px;
+  .container {
+    padding: 0 80px;
+    max-width: none;
+  }
+  header {
     margin-bottom: 188px;
+  }
+  .top-box {
     display: flex;
     justify-content: space-between;
-    
     .logo {
-      margin-left: 80px;
+      flex-shrink: 0;
     }
 
     .menu {
@@ -32,7 +45,6 @@
   }
 
   .header-button {
-    margin-right: 80px;
     input, button {
       background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
       padding: 10px 30px;
@@ -48,7 +60,7 @@
   }
   
   .center-box {
-    margin-bottom: 218px;
+    margin-bottom: 100px;
     .container {
       width: 1300px;
       margin: 0 auto;
@@ -114,6 +126,7 @@
       width: 1300px;
       margin: 0 auto;
       display: flex;
+      margin-top: 118px;
     }
     .button-box {
       padding: 43px 0;
@@ -756,3 +769,19 @@ footer {
   }
 
 }
+@media (max-width: 1318px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;  
+  }
+  .promo-block {
+    .top-box {
+      
+    }
+    .center-box {
+      .countdown-title {
+        font-size: 55px;
+      }
+    }
+  }
+}  
