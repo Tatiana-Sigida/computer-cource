@@ -3,8 +3,15 @@
 
 .container {
   margin: 0 auto;
+  padding: 0 15px;
   width: 100%;
   max-width: 1300px;
+  @media (max-width: $hd) {
+    max-width: calc($desktop - 30px);
+  }
+  @media (max-width: $desktop) {
+    max-width: calc($table - 30px);
+  }
 }
 
 .promo-block {
@@ -13,6 +20,9 @@
   background-size: cover;
   .container {
     padding: 0 80px;
+    @media (max-width: $desktop) {
+    padding: 0 15px;
+    }
     max-width: none;
   }
   header {
@@ -28,6 +38,7 @@
     .menu {
       display: flex;
       align-items: center;
+      
       a {
         color: rgba(255, 255, 255, 1);
         margin-right: 56px;
@@ -40,6 +51,9 @@
         &:last-child {
           margin-right: 0;
         }
+        @media (max-width: $desktop) {
+        display: none;
+        }  
       }
     }
   }
@@ -61,18 +75,20 @@
   
   .center-box {
     margin-bottom: 100px;
-    .container {
-      width: 1300px;
-      margin: 0 auto;
-    }
-    
+        
     .countdown-title {
-      width: 920px;
+      max-width: 920px;
       margin-bottom: 50px;
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;
       font-size: 64px;
+      @media (max-width: $smDesktop) {
+        font-size: 48px;
+        }
+      @media (max-width: $table) {
+        font-size: 38px;
+      }     
       line-height: 140%;
       color: #FFFFFF;     
     }
@@ -89,10 +105,16 @@
   
       .countdown-number {
       padding: 30px;
+      @media (max-width: $table) {
+        padding: 20px;
+      }
       border-radius: 3px;
       background: #121212;
       display: inline-block;
       margin-right: 30px;
+      @media (max-width: $table) {
+        margin-right: 18px;
+      }
     }
 
     .countdown-time {
@@ -102,6 +124,9 @@
       font-style: normal;
       font-weight: bold;
       font-size: 36px;
+      @media (max-width: $table) {
+        font-size: 26px;
+      }
       line-height: 140%;
       color: #FFFFFF;
     }
@@ -115,6 +140,9 @@
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
+      @media (max-width: $table) {
+        font-size: 14px;
+      }
       text-align: center;
       opacity: 0.4;
     }
@@ -122,11 +150,14 @@
 
   .course-wrap {
     background: rgba(18, 18, 18, 1);
+    
     .container {
-      width: 1300px;
-      margin: 0 auto;
       display: flex;
       margin-top: 118px;
+      @media (max-width: $smDesktop) {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
     }
     .button-box {
       padding: 43px 0;
@@ -167,6 +198,10 @@
   .money-statistics {
       color: white;
       margin-top: 36px;
+      flex-grow: 1;
+      @media (max-width: $smDesktop) {
+        width: 80%;
+      }
       p {
         font-family: Roboto;
         font-style: normal;
@@ -205,8 +240,11 @@
 
       .range {
         display: flex;
+        justify-content: space-between;
         span {
-          margin-right: 634px;
+          @media (max-width: $hd) {
+
+          }
           &:last-child {
             margin-right: 0;
           }
@@ -220,42 +258,67 @@
   background: url(../images/bgc.png);
   padding-top: 200px;
   padding-bottom: 115.5px;
+  @media (max-width: $table) {
+    padding-top: 130px;
+    padding-bottom: 90.5px;
+  }
+  
   .container {
-    width: 1301px;
-    margin: 0 auto;
-    display: flex;
+  display: flex;
   }
   .about-img {
     padding-right: 134px;
+    @media (max-width: $table) {
+      padding-right: 30px;
+    }
   }
-  h2 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 140%;
-  color: #FFFFFF;
-  padding-bottom: 45px;
+  .about-text {
+    width: 636px;
+    @media (max-width: $desktop) {
+      width: 310px;
+    }
+      h2 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      @media (max-width: $desktop) {
+        font-size: 42px;
+      }
+      @media (max-width: $smDesktop) {
+        font-size: 36px;
+        }
+      @media (max-width: $table) {
+        font-size: 28px;
+      }   
+      line-height: 140%;
+      color: #FFFFFF;
+      padding-bottom: 45px;
 
-  }
-  p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 160%;
-  color: #FFFFFF;
-  width: 636px;
+      }
+      p {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      @media (max-width: $table) {
+        font-size: 14px;
+      }
+      line-height: 160%;
+      color: #FFFFFF;
+      
+    }
   }
 }
-
 .start {
   background: url(../images/bgc.png); 
   padding-top: 115.5px;
-  .container {
-    width: 1301px;
-    margin: 0 auto;
+  padding-bottom: 100px;
+  @media (max-width: $table) {
+    padding-top: 90.5px;
+    padding-bottom: 80px;
   }
+  
   .start-icon {
     display: flex;
     margin-left: 7px;
@@ -264,6 +327,12 @@
       font-style: normal;
       font-weight: bold;
       font-size: 48px;
+      @media (max-width: $smDesktop) {
+        font-size: 42px;
+        }
+      @media (max-width: $table) {
+        font-size: 38px;
+      }   
       line-height: 140%;
       color: #fff;
       margin-left: 20px;
@@ -285,7 +354,6 @@
   }
   .start-infographic {
     display: flex;
-    padding-bottom: 100px;
     .infographic {
       color: #fff;
       &:nth-child(1) {
@@ -330,6 +398,9 @@
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
+    @media (max-width: $table) {
+      font-size: 28px;
+    }
     line-height: 140%;
     color: #FFFFFF;
     margin-bottom: 20px;
@@ -352,15 +423,21 @@
   text-align: center;
   padding-top: 100px;
   padding-bottom: 115.5px;
-  .container {
-    width: 1301px;
-    margin: 0 auto;
+  @media (max-width: $table) {
+    padding-top: 90.5px;
   }
+  
   h2 {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
+    @media (max-width: $smDesktop) {
+      font-size: 42px;
+      }
+    @media (max-width: $table) {
+      font-size: 38px;
+    }   
     line-height: 140%;
     color: #FFFFFF;
     margin-bottom: 120px;
@@ -380,6 +457,9 @@
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
+        @media (max-width: $table) {
+          font-size: 18px;
+        }
         line-height: 140%;
         color: #FFFFFF;
         margin-bottom: 30px;
@@ -389,6 +469,9 @@
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
+        @media (max-width: $table) {
+          font-size: 14px;
+        }
         line-height: 160%;
         color: #FFFFFF;
       }
@@ -400,12 +483,14 @@
   background: url(../images/bgc.png); 
   padding-top: 115.5px;
   padding-bottom: 121.75px;
-  .container {
-    width: 1301px;
-    margin: 0 auto;
+  @media (max-width: $table) {
+    padding-top: 80.5px;
+    padding-bottom: 90.5px;
   }
+  
   .partners-icon {
     display: flex;
+    align-items: center;
     padding-bottom: 89px;
     img {
       margin-right: 52px;
@@ -416,13 +501,22 @@
       font-style: normal;
       font-weight: bold;
       font-size: 48px;
-      line-height: 140%;
+      @media (max-width: $smDesktop) {
+        font-size: 42px;
+        } 
+      @media (max-width: $table) {
+        font-size: 38px;
+      }
+        line-height: 140%;
       color: #FFFFFF;
     }
   }
   .partners-logos {
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: $desktop) {
+      justify-content: center;
+    }
     border: 2px solid #000000;
     position: relative;
     &::before {
@@ -439,6 +533,9 @@
       align-items: center;
       justify-content: center;
       width: 25%;
+      @media (max-width: $desktop) {
+        width: 50%;
+      }
       padding: 29px 0;
       border: 1px solid rgba(#fff, .3);
     }
@@ -448,11 +545,11 @@
   background: url(../images/bgc.png); 
   padding-bottom: 115.5px;
   padding-top: 121.75px;
-  text-align: center;
-  .container {
-    width: 1301px;
-    margin: 0 auto;
+  @media (max-width: $table) {
+    padding-top: 80.75px;
+    padding-bottom: 90.5px;
   }
+  text-align: center;
   .program-icon {
     img {
       padding-bottom: 76.35px;
@@ -462,6 +559,9 @@
       font-style: normal;
       font-weight: bold;
       font-size: 48px;
+      @media (max-width: $table) {
+        font-size: 38px;
+      }
       line-height: 140%;
       text-align: center;
       color: #FFFFFF;
@@ -593,9 +693,9 @@
   background: url(../images/bgc.png); 
   padding-top: 115.5px;
   padding-bottom: 105px;
-  .container {
-    width: 1301px;
-    margin: 0 auto;
+  @media (max-width: $table) {
+    padding-top: 90.5px;
+    padding-bottom: 90px;
   }
   .teachers-icon {
     display: flex;
@@ -608,6 +708,9 @@
       font-style: normal;
       font-weight: bold;
       font-size: 48px;
+      @media (max-width: $table) {
+        font-size: 38px;
+      }
       line-height: 140%;
       color: #FFFFFF;
       margin-left: 38.61px;
@@ -618,7 +721,14 @@
     display: flex;
     text-align: center;
     justify-content: space-around;
-   
+    @media (max-width: $table) {
+      flex-direction: column;
+    }
+  .photo {
+    @media (max-width: $table) {
+      margin-bottom: 25px;
+    }
+  } 
     p {
       margin-top: 40px;
       font-family: Roboto;
@@ -672,16 +782,18 @@ footer {
   background: url(../images/bgc.png); 
   padding-bottom: 30px;
   padding-top: 115.5px;
-  text-align: center;
-  .container {
-    width: 1301px;
-    margin: 0 auto;
+  @media (max-width: $table) {
+    padding-top: 90.5px;
   }
+  text-align: center;
   h2 {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
+    @media (max-width: $table) {
+      font-size: 38px;
+    }
     line-height: 140%;
     color: #FFFFFF;
     margin-bottom: 30px;
@@ -697,7 +809,7 @@ footer {
   }
   .form {
     position: relative;
-    width: 492Px;
+    max-width: 492Px;
     margin: 60px auto 40px;
   }
   .shadow {
@@ -769,19 +881,3 @@ footer {
   }
 
 }
-@media (max-width: 1318px) {
-  .container {
-    max-width: 100%;
-    padding: 0 15px;  
-  }
-  .promo-block {
-    .top-box {
-      
-    }
-    .center-box {
-      .countdown-title {
-        font-size: 55px;
-      }
-    }
-  }
-}  
