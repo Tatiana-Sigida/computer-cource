@@ -27,6 +27,9 @@
   }
   header {
     margin-bottom: 188px;
+    @media (max-width: $smDesktop) {
+      margin-bottom: 140px;
+    }
   }
   .top-box {
     display: flex;
@@ -88,6 +91,9 @@
         }
       @media (max-width: $table) {
         font-size: 38px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 24px;
       }     
       line-height: 140%;
       color: #FFFFFF;     
@@ -108,12 +114,18 @@
       @media (max-width: $table) {
         padding: 20px;
       }
+      @media (max-width: $mobile) {
+        padding: 12px;
+      }
       border-radius: 3px;
       background: #121212;
       display: inline-block;
       margin-right: 30px;
       @media (max-width: $table) {
         margin-right: 18px;
+      }
+      @media (max-width: $mobile) {
+        margin-right: 10px;
       }
     }
 
@@ -126,6 +138,9 @@
       font-size: 36px;
       @media (max-width: $table) {
         font-size: 26px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 18px;
       }
       line-height: 140%;
       color: #FFFFFF;
@@ -142,6 +157,9 @@
       font-size: 16px;
       @media (max-width: $table) {
         font-size: 14px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 11px;
       }
       text-align: center;
       opacity: 0.4;
@@ -180,6 +198,9 @@
   
     .people-box {
       padding: 36px 81px 28px 81px;
+      @media (max-width: $mobile) {
+        padding: 36px 15px 28px 10px;
+      }
       color: #FFFFFF;
       p {
         font-family: Roboto;
@@ -201,6 +222,9 @@
       flex-grow: 1;
       @media (max-width: $smDesktop) {
         width: 80%;
+      }
+      @media (max-width: $mobile) {
+        width: 100%;
       }
       p {
         font-family: Roboto;
@@ -258,16 +282,28 @@
   background: url(../images/bgc.png);
   padding-top: 200px;
   padding-bottom: 115.5px;
+  @media (max-width: $smDesktop) {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
   @media (max-width: $table) {
-    padding-top: 130px;
-    padding-bottom: 90.5px;
+    padding-top: 80px;
+    padding-bottom: 50px;
   }
   
   .container {
   display: flex;
+  @media (max-width: $desktop) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   }
   .about-img {
     padding-right: 134px;
+    @media (max-width: $desktop) {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
     @media (max-width: $table) {
       padding-right: 30px;
     }
@@ -275,8 +311,9 @@
   .about-text {
     width: 636px;
     @media (max-width: $desktop) {
-      width: 310px;
+      text-align: center;
     }
+    
       h2 {
       font-family: Roboto;
       font-style: normal;
@@ -284,6 +321,7 @@
       font-size: 48px;
       @media (max-width: $desktop) {
         font-size: 42px;
+        text-align: center;
       }
       @media (max-width: $smDesktop) {
         font-size: 36px;
@@ -314,9 +352,13 @@
   background: url(../images/bgc.png); 
   padding-top: 115.5px;
   padding-bottom: 100px;
-  @media (max-width: $table) {
-    padding-top: 90.5px;
+  @media (max-width: $smDesktop) {
+    padding-top: 70px;
     padding-bottom: 80px;
+  }
+  @media (max-width: $table) {
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
   
   .start-icon {
@@ -332,7 +374,10 @@
         }
       @media (max-width: $table) {
         font-size: 38px;
-      }   
+      } 
+      @media (max-width: $mobile) {
+        font-size: 26px;
+      }  
       line-height: 140%;
       color: #fff;
       margin-left: 20px;
@@ -342,6 +387,9 @@
     
     p {
     margin: 49px 0px 80px;
+    @media (max-width: $table) {
+      margin: 35px 0 55px;
+    }
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -349,11 +397,14 @@
     line-height: 160%;
     color: #ffffff;
     Opacity: 50%;
-    width: 411px;
+    max-width: 411px;
     }
   }
   .start-infographic {
     display: flex;
+    @media (max-width: $table) {
+      flex-wrap: wrap;
+    }
     .infographic {
       color: #fff;
       &:nth-child(1) {
@@ -365,6 +416,9 @@
       &:nth-child(2) {
         .padding-wrap {
           padding: 10px 0;
+          @media (max-width: $table) {
+            padding: 0;
+          }
         }
         .infographic-gradient {
           height: 60px;
@@ -375,6 +429,9 @@
       &:nth-child(3) {
         .padding-wrap {
           padding: 25px 0;
+          @media (max-width: $table) {
+            padding: 0;
+          }
         }
         .infographic-gradient {
           height: 30px;
@@ -384,6 +441,9 @@
       &:nth-child(4) {
         .padding-wrap {
           padding: 35px 0;
+          @media (max-width: $table) {
+            padding: 0;
+          }
         }
         .infographic-gradient {
           height: 10px;
@@ -391,6 +451,12 @@
           transform: matrix(-1, 0, 0, 1, 0, 0);
         }
       }
+      
+      .infographic-gradient {
+        @media (max-width: $table) {
+        display: none;
+        }
+      }      
     }
   }
   .infographic-number {
@@ -400,6 +466,10 @@
     font-size: 36px;
     @media (max-width: $table) {
       font-size: 28px;
+      text-align: center;
+    }
+    @media (max-width: $mobile) {
+      font-size: 20px;
     }
     line-height: 140%;
     color: #FFFFFF;
@@ -416,6 +486,10 @@
     opacity: 0.5;
     margin-top: 35px;
     margin-right: 18px;
+    @media (max-width: $table) {
+      text-align: center;
+      margin: 10px 0 40px;
+    }
   } 
 }
 .advantages {
@@ -423,8 +497,13 @@
   text-align: center;
   padding-top: 100px;
   padding-bottom: 115.5px;
+  @media (max-width: $smDesktop) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
   @media (max-width: $table) {
-    padding-top: 90.5px;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
   
   h2 {
@@ -437,19 +516,42 @@
       }
     @media (max-width: $table) {
       font-size: 38px;
-    }   
+    } 
+    @media (max-width: $mobile) {
+      font-size: 26px;
+    }  
     line-height: 140%;
     color: #FFFFFF;
     margin-bottom: 120px;
+    @media (max-width: $table) {
+      margin-bottom: 80px;
+      @media (max-width: $table) {
+        margin-bottom: 60px;
+      }
+    }
   }
   .advantages-column {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $table) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   .column {
     width: 27.5%;
+    @media (max-width: $table) {
+      width: 70%;
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     .advantages-icon {
       margin-bottom: 60px;
+      @media (max-width: $table) {
+        margin-bottom: 30px;
+      }
     }
     .advantages-text {
       h3 {
@@ -463,6 +565,9 @@
         line-height: 140%;
         color: #FFFFFF;
         margin-bottom: 30px;
+        @media (max-width: $table) {
+          margin-bottom: 20px;
+        }
       }
       p {
         font-family: Roboto;
@@ -483,15 +588,22 @@
   background: url(../images/bgc.png); 
   padding-top: 115.5px;
   padding-bottom: 121.75px;
+  @media (max-width: $smDesktop) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
   @media (max-width: $table) {
-    padding-top: 80.5px;
-    padding-bottom: 90.5px;
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
   
   .partners-icon {
     display: flex;
     align-items: center;
     padding-bottom: 89px;
+    @media (max-width: $table) {
+      padding-bottom: 45px;
+    }
     img {
       margin-right: 52px;
     }
@@ -507,7 +619,10 @@
       @media (max-width: $table) {
         font-size: 38px;
       }
-        line-height: 140%;
+      @media (max-width: $mobile) {
+        font-size: 26px;
+      }
+      line-height: 140%;
       color: #FFFFFF;
     }
   }
@@ -536,6 +651,9 @@
       @media (max-width: $desktop) {
         width: 50%;
       }
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
       padding: 29px 0;
       border: 1px solid rgba(#fff, .3);
     }
@@ -545,14 +663,21 @@
   background: url(../images/bgc.png); 
   padding-bottom: 115.5px;
   padding-top: 121.75px;
+  @media (max-width: $smDesktop) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
   @media (max-width: $table) {
-    padding-top: 80.75px;
-    padding-bottom: 90.5px;
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
   text-align: center;
   .program-icon {
     img {
       padding-bottom: 76.35px;
+      @media (max-width: $table) {
+        padding-bottom: 45px;
+      }
     }
     h2 {
       font-family: Roboto;
@@ -561,6 +686,9 @@
       font-size: 48px;
       @media (max-width: $table) {
         font-size: 38px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 26px;
       }
       line-height: 140%;
       text-align: center;
@@ -577,7 +705,7 @@
       color: #FFFFFF;
       opacity: 0.5;
       padding-bottom: 80px;
-      width: 400px;
+      max-width: 400px;
       margin: auto;
     }
   }
@@ -641,6 +769,9 @@
       text-align: right;
       width: 50%;
       padding-right: 60px;
+      @media (max-width: $mobile) {
+        padding-right: 46px;
+        }
       &::before {
         position: absolute;
         top: 50%;
@@ -657,6 +788,9 @@
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
+      @media (max-width: $mobile) {
+        font-size: 10px;
+      }
       line-height: 160%;
       color: #FFFFFF;
       opacity: 0.5;
@@ -667,6 +801,9 @@
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
+      @media (max-width: $mobile) {
+      font-size: 12px;
+      }
       line-height: 160%;
       color: #FFFFFF;
     }
@@ -674,6 +811,9 @@
       margin-left: auto;
       text-align: left;
       padding-left: 60px;
+      @media (max-width: $mobile) {
+        padding-left: 46px;
+      }
       padding-right: 0;
       &::before {
         left: 0;
@@ -693,9 +833,13 @@
   background: url(../images/bgc.png); 
   padding-top: 115.5px;
   padding-bottom: 105px;
+  @media (max-width: $smDesktop) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
   @media (max-width: $table) {
-    padding-top: 90.5px;
-    padding-bottom: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .teachers-icon {
     display: flex;
@@ -711,9 +855,15 @@
       @media (max-width: $table) {
         font-size: 38px;
       }
+      @media (max-width: $mobile) {
+        font-size: 26px;
+      }
       line-height: 140%;
       color: #FFFFFF;
       margin-left: 38.61px;
+      @media (max-width: $mobile) {
+        margin-left: 30px;
+      }
     }
   }
   .teachers-photo {
@@ -726,7 +876,10 @@
     }
   .photo {
     @media (max-width: $table) {
-      margin-bottom: 25px;
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   } 
     p {
@@ -782,8 +935,11 @@ footer {
   background: url(../images/bgc.png); 
   padding-bottom: 30px;
   padding-top: 115.5px;
+  @media (max-width: $smDesktop) {
+    padding-top: 70px;
+  }
   @media (max-width: $table) {
-    padding-top: 90.5px;
+    padding-top: 40px;
   }
   text-align: center;
   h2 {
@@ -793,6 +949,9 @@ footer {
     font-size: 48px;
     @media (max-width: $table) {
       font-size: 38px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 26px;
     }
     line-height: 140%;
     color: #FFFFFF;
@@ -873,6 +1032,9 @@ footer {
       font-style: normal;
       font-weight: normal;
       font-size: 20px;
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
       line-height: 160%;
       text-align: center;
       color: #ffffff;
